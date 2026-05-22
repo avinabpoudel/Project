@@ -1,0 +1,28 @@
+<html>
+<fieldset>
+<legend><b>Regestration Form</b></legend>
+<form oninput="x.value=(parseInt(m1.value)+parseInt(m2.value)+parseInt(m3.value))/3">
+    <lable><b>Name</b></lable>
+    <input type="text" id="name"><br><br>
+    <lable><b>Password</b></lable>
+    <input type="password" id="password"><br><br>
+    <lable>Gender</lable>
+        <select name="gender" id="gender">
+          <option value="Male">Male</option>
+          <option value="Female">Female</option>
+          <option value="Rather not say">Rather not say</option>
+        </select>
+        <h2>Now this is for the average of numbers</h2>
+        <input type="number" id="m1" ><br><br>
+        <input type="number" id="m2" ><br><br>
+        <input type="number" id="m3" ><br><br>
+        Average: <output name="x" for="m1 m2 m3"></output><br><br><br>
+        <h2>Now check boxes</h2>
+        <b>Hobbies</b><br>
+        <input type="checkbox">Drawing<br>
+        <input type="checkbox">Singing<br>
+        <input type="checkbox">Playing<br><br>
+<button>Submit</button>
+</form>
+</fieldset>
+</html>
