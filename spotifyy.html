@@ -1,0 +1,96 @@
+<html>
+<head>
+    <style>
+    body{
+        font-family:Arial, Helvetica, sans-serif;
+        background-color:#121212;
+       display:flex;
+    }
+ 
+    .sidebar{
+        height: 530px;
+        background: #000;
+        padding:20px;
+        color:white;
+    }
+    .sidebar h2{
+        color:white;
+        margin-bottom:20px;
+    }
+    .sidebar ul{
+        list-style: none;
+        text-decoration:none;   
+    }
+    .sidebar li{
+        cursor:pointer;
+        padding:12px 0px;
+        
+    }
+    .sidebar li a{text-decoration: none;
+        color:white;
+     
+     
+    }
+    .main{font-family:Arial, Helvetica, sans-serif;padding:10px 30px 40px;
+        flex-direction:column;font-weight:bold;
+    }
+    .main h2{color:aliceblue; font-size:1.0em; margin-bottom:18px; padding:20px;}
+    .row{display:flex;padding:20px; gap:20px;flex-wrap:wrap;
+        color:white;
+    }
+    .card{
+            width:155px; height: 88px; border-radius:6px;
+            display:flex; align-items: flex-end; padding: 8px;
+            font-size: 0.80em; font-weight:bold;
+            position:relative; overflow:hidden; flex-shrink:0; cursor:pointer;
+    }
+    .card span{position:relative; z-index:1; }
+        .c1{background:linear-gradient(rgb(174, 8, 8), rgb(110, 4, 4))}
+        .c2{background:linear-gradient(rgb(39, 26, 224), rgb(15, 4, 77))}
+        .c3{background:linear-gradient(rgb(117, 113, 113), rgb(53, 51, 51))}
+        .c4{background:linear-gradient(rgb(178, 219, 42), rgb(49, 75, 10))}
+        .c5{background:linear-gradient(rgb(121, 46, 192), rgb(50, 4, 71))}
+        .c6{background:linear-gradient(rgb(48, 171, 224), rgb(6, 85, 112))}
+       .c7{background:linear-gradient(rgb(117, 12, 4), rgb(199, 106, 6))}
+       .c8{background:linear-gradient(rgb(117, 113, 113), rgb(53, 51, 51))}
+    
+    </style>
+</head>
+</body>
+<div class="content">
+<div class="Sidebar">
+    <h2>Spotify</h2>
+    <ul>
+        <li><a href="#">🏠 Home</a></li>
+        <li><a href="#">🔍 Search</a></li>
+        <li><a href="#">📚 Your Library</a></li>
+        <li><a href="#">❤️ Liked Songs</a></li>
+    </ul>
+</div>
+</div>
+<div class="container">
+
+<div class="main">
+    <h2>Top Tracks</h2>
+        <div class="row">
+    <div class="card c1"><span>Oceans</span></div>
+    <div class="card c2"><span>Billie Jean</span></div>
+    <div class="card c3"><span>Beat it</span></div>
+    <div class="card c4"><span>Daylight</span></div>
+    <div class="card c5"><span>Not like us</span></div>
+    </div>
+
+</div>
+<div class="main">
+    <h2>Popular This Month</h2>
+    <div class="row">
+        <div class="card c6"><span>Mercedes Benz</span></div>
+        <div class="card c7"><span>Golden Brown</span></div>
+        <div class="card c8"><span>Smooth Criminal</span></div>
+        <div class="card c2"><span>Humble.</span></div>
+        <div class="card c1"><span>Money Tree</span></div>
+    </div>
+</div>
+</div>
+</body>
+</html>
