@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Marks</title>
+</head>
+<body>
+    <input type="number" id="num" placeholder="Enter your marks">
+    <p id="result"></p>
+    <button onclick="calculate()">Calculate</button>
+    <script>
+        
+        function calculate(){
+            var num = document.getElementById("num").value;
+            var result;
+            if (num>80){
+                result ="Excellent";
+            }
+            else if(num>60){
+               result ="Good";
+            }
+            else if(num>40){
+                result ="Fair";
+            }
+            else if(num>0){
+                result ="Need to do better";
+            }
+            else{
+                result ="Invalid";
+            }
+             document.getElementById("result").innerHTML = "Result: "+ result;
+        }
+        
+    </script>
+</body>
+</html>
