@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zoo</title>
+    <style>
+        
+    </style>
+</head>
+<body>
+    <div id="zoo">
+        <div  id="zoo">Zone 1 : <span id="zone1"></span></div>
+        <div  id="zoo">Zone 2 : <span id="zone2"></span></div>
+        <div  id="zoo">Zone 3 : <span id="zone3"></span></div>
+        
+        
+    </div>
+    <button onclick="avinab()">Open the zoo</button>
+    <p id="zoo-status"></p>
+    <script>
+        function avinab(){
+        document.getElementById("zone1").innerHTML="Lion" 
+        document.getElementById("zone2").innerHTML="Elephant"
+        document.getElementById("zone3").innerHTML="Penguin"
+        document.getElementById("zoo").style.background="lightgreen"
+        document.getElementById("zoo-status").innerHTML=document.title("The zoo is open")
+        }
+
+    </script>
+</body>
+</html>
