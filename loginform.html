@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form</title>
+    <style>
+        
+        body{
+            background:linear-gradient(to right,#0F3040, #0F3040);
+        }
+        .gg{
+            padding:20px;    
+        }
+        #email{
+            height:50px;
+            width:250pxpx;
+            font-size:large;
+            border-radius:10px;
+            background-color:#464858;
+            color:white;
+             margin-top:10px;
+           
+        }
+        #password{
+            height:50px;
+            width:250pxpx;
+            font-size:large;
+            border-radius:10px;
+            background-color:#464858;
+            color:white;
+             margin-top:10px;
+            
+        }
+        .diemo{
+            height:50px;
+            width:250pxpx;
+            font-size:large;
+            background-color:#A56F63;
+            border:solid #A56F63;
+            border-radius:10px;
+            color:white;
+            margin-top:15px;
+        }
+        .main{
+            border:solid #D99B7F;
+            max-width:500px;
+            background-color:#D99B7F;
+            border-radius:10px;
+            position:relative;
+            left:400px;
+            top : 160px;
+        }
+        #demo{
+            font-family:monospace;
+            font-weight:bold;
+            font-size:large;
+        }
+        
+    </style>
+</head>
+<body>
+    <div class="main">
+    <form class="gg">
+        <center>
+    <div class="loggin">
+    <input type="email" id="email" placeholder="Enter your email">
+    </div>
+    <div class="login2">
+    <input type="password" id="password" placeholder="Enter your password">
+    </div>
+    <div class="login3">
+    <button class="diemo" type="submit" onclick="loginUser(event)">Submit</button>
+    
+    </div>
+    </form>
+    <p id="demo" align="center"></p>
+    </center>
+    </div>
+    <script>
+        function loginUser(event){
+    event.preventDefault();
+
+    let email = document.getElementById("email").value;
+    let password = document.getElementById("password").value;
+    let demo = document.getElementById("demo");
+
+    if (email === "" || password === ""){
+        demo.style.color="red";
+        demo.innerHTML="Please fill all fields"
+    }else if (email === "zeqo@gmail.com" || password === "12345"){
+        demo.style.color="green";
+        demo.innerHTML="Login Sucess full";
+    }else{
+        demo.style.color="red";
+        demo.innerHTML="Invalid Login or Password"
+    }
+}
+    </script>
+</body>
+</html>
