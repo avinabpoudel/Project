@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Superhero Cards</title>
+
+
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    padding: 20px;
+  }
+
+  .hero-card {
+    display: inline-block;
+    border: 2px solid black;
+    border-radius: 10px;
+    padding: 15px;
+    margin: 10px;
+    width: 200px;
+    text-align: left;
+  }
+</style>
+</head>
+
+<body>
+
+  <h1>Superhero Cards</h1>
+  <p>Click the button to show the superhero cards.</p>
+
+  <button onclick="showHeroes()">Show Superheroes</button>
+
+  <div id="heroCards"></div>
+
+<script>
+  class Superhero {
+
+    constructor(name, power, mission) {
+
+      this.name = name;
+      this.power = power;
+      this.mission = mission;
+    }
+
+    describeHero() {
+      return `
+        <div class="hero-card">
+          <h2>${this.name}</h2>
+          <p>Power: ${this.power}</p>
+          <p>Mission: ${this.mission}</p>
+        </div>
+      `;
+    }
+  }
+
+  
+  function showHeroes() {
+
+    const hero1 = new Superhero("Spiderman", "Wall-crawling and spider-sense", "Protect New York City from crime");
+    const hero2 = new Superhero("Thor", "Control over lightning and thunder", "Defend Asgard and Earth from evil forces");
+
+    
+    document.getElementById("heroCards").innerHTML =
+      hero1.describeHero() + hero2.describeHero();
+  }
+
+
+</script>
+
+</body>
+</html>
