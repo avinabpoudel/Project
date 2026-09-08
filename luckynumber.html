@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lucky Number</title>
+</head>
+<body>
+    <h1>Lucky Number Guess</h1>
+    <h6>Enter a lucky number and win!</h6>
+    <input id="name" type="text" placeholder="Your Name">
+    <p id="name-msg"></p>
+    
+    <input id="numb" type="number" placeholder="Guess the Number">
+    <p id="numb-msg"></p>
+    
+    <button onclick="checkform()">Try your Luck!</button>
+    <p id="guess"></p>
+    <p id="timer"></p>
+
+    <script>
+        var seconds = 0;
+        setInterval(function(){
+            seconds = seconds + 1;
+            document.getElementById("timer").textContent="You have been here for "+ seconds +
+            " Seconds!";
+        },1000);
+        function checkform(){
+            var name =document.getElementById("name").value;
+           var numb = document.getElementById("numb").value;
+            var ok = true;
+
+            if(name == ""){
+                document.getElementById("name-msg").textContent="Please fill your name";
+                document.getElementById("name-msg").style.color="red";
+                ok = false;
+            }
+            else{
+                document.getElementById("name-msg").textContent="Great Name";
+                document.getElementById("name-msg").style.color="green";
+            }
+
+            if(numb == ""){
+                document.getElementById("numb-msg").textContent="Please enter your guess";
+                document.getElementById("numb-msg").style.color="red";
+                ok = false;
+            }
+            else{
+                document.getElementById("numb-msg").textContent="Great Guess";
+                document.getElementById("numb-msg").style.color="green";
+            }
+
+            if(ok == true){
+                var luck = Math.floor(Math.random() * 10) + 1;
+                if (numb == luck){
+                    document.getElementById("guess").textContent="You Win, "+ name +
+                    " The Lucky number was "+ luck +"!";
+                }
+                else{
+                    document.getElementById("guess").textContent="So Close! "+ name +
+                    " The number was"+ luck;
+                }
+            }
+            
+        }
+    </script>
+
+</body>
+</html>
