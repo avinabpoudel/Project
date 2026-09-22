@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>My Calculator</title>
+<style>
+  body {
+    background-color: lightgray;
+    font-family: Arial;
+  }
+  input {
+    width: 150px;
+    height: 30px;
+    font-size: 20px;
+    margin-bottom: 10px;
+  }
+  button {
+    width: 40px;
+    height: 40px;
+    font-size: 18px;
+  }
+</style>
+</head>
+<body>
+
+<h2>My Calculator</h2>
+
+<input type="text" id="answer">
+<br>
+
+<button onclick="document.getElementById('answer').value += '1'">1</button>
+<button onclick="document.getElementById('answer').value += '2'">2</button>
+<button onclick="document.getElementById('answer').value += '3'">3</button>
+<button onclick="document.getElementById('answer').value += '+'">+</button>
+<br>
+
+<button onclick="document.getElementById('answer').value += '4'">4</button>
+<button onclick="document.getElementById('answer').value += '5'">5</button>
+<button onclick="document.getElementById('answer').value += '6'">6</button>
+<button onclick="document.getElementById('answer').value += '-'">-</button>
+<br>
+
+<button onclick="document.getElementById('answer').value += '7'">7</button>
+<button onclick="document.getElementById('answer').value += '8'">8</button>
+<button onclick="document.getElementById('answer').value += '9'">9</button>
+<button onclick="document.getElementById('answer').value += '*'">*</button>
+<br>
+
+<button onclick="document.getElementById('answer').value += '0'">0</button>
+<button onclick="clearAnswer()">CE</button>
+<button onclick="document.getElementById('answer').value += '/'">/</button>
+<button onclick="calculate()">=</button>
+
+<script>
+function calculate() {
+  var input = document.getElementById('answer').value;
+  var result = eval(input);
+  document.getElementById('answer').value = result;
+}
+
+function clearAnswer() {
+  document.getElementById('answer').value = '';
+}
+</script>
+
+</body>
+</html>
